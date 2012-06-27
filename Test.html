@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script type="text/javascript" src="Likert.js"></script>
+	</head>
+	<body>
+		<div id="testDefault"></div>
+		<div id="testCustom"></div>
+		<script type="text/javascript">
+			var def = Likert.likert('testDefault');
+			setTimeout(function() {
+				var custom = Likert.likert('testCustom', {  name:"likeme", range: [1,5], labels: ['sucks','ok','decent','good','awesome'], text: "RATEMEPLEASE", show_labels: true });
+
+				}, 300);
+		</script>
+	</body>
+</html>
+
