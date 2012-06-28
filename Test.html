@@ -1,16 +1,24 @@
 <html>
 	<head>
 		<script type="text/javascript" src="Likert.js"></script>
+		<script type="text/javascript" src="ShortAnswer.js"></script>
+		<style>
+			input.radio {
+				width:50px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="testDefault"></div>
 		<div id="testCustom"></div>
+		<div id="shortDefault"></div>
+		<div id="shortCustom"></div>
 		<script type="text/javascript">
-			var def = Likert.likert('testDefault');
-			setTimeout(function() {
-				var custom = Likert.likert('testCustom', {  name:"likeme", range: [1,5], labels: ['sucks','ok','decent','good','awesome'], text: "RATEMEPLEASE", show_labels: true });
+			var def = new Likert('testDefault').likert();
+			var custom = new Likert('testCustom', {  name:"likeme", range: [1,5], labels: ['sucks','ok','decent','good','awesome'], text: "RATEMEPLEASE", show_labels: true, radio_class: 'radio' }).likert();
 
-				}, 300);
+			var shortDefault = new ShortAnswer('shortDefault').shortanswer();
+			var shortCustom = new ShortAnswer('shortCustom',{ name: "CustomShortAnswer", text: "Question 1", multiline: true, width: 500, height: 300, length_limit:100, show_chars_left: true, }).shortanswer();
 		</script>
 	</body>
 </html>
