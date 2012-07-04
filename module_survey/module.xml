@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+	<title>Survey Module</title>
+	<author>Ryan Merl</author>
+	<date>2012 07 02</date>
+	<version>0.1</version>
+	<description>Allows for course surveys as well as reports on survey data</description>
+	<className>module_survey</className>
+	<requires>3.6.8</requires>
+</module>
